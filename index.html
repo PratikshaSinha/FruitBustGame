@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Burst Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="gameContainer">
+        
+        <!-- Scoreboard Display Area -->
+        <div id="scoreboard">
+            Score: <span id="score">0</span> |
+            Missed: <span id="missedCount">0</span> 
+        </div>
+
+        <!-- The main area where fruits fall -->
+        <div id="gameArea">
+            <!-- The Catcher Object -->
+            <div id="catcher">🧺</div> 
+            <!-- Fruits are created here dynamically by JavaScript -->
+        </div>
+
+        <!-- Initial Start Screen Overlay (Covers the whole game area first) -->
+        <div id="initialOverlay">
+            <h1>Fruit Burst Game</h1>
+            <p>Click "Start Game" to play.</p>
+            <button id="initialStartButton">Start Game</button>
+        </div>
+
+        <!-- Game Over Modal (Hidden by default, shown by JavaScript) -->
+        <div id="gameOverModal" style="display: none;">
+            <div id="gameOverSticker">💀</div> <!-- Funny face sticker -->
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="startButton">Restart Game</button> <!-- Restart button -->
+        </div>
+
+    </div>
+    
+    <!-- Audio element for the game over sound -->
+    <audio id="gameOverSound" src="game_over.mp3" preload="auto"></audio>
+
+    <!-- Link the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

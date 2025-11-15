@@ -1,0 +1,147 @@
+/* General body styling to center the game on the screen */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Main game container */
+#gameContainer {
+    width: 400px;
+    height: 600px;
+    background-color: #ffffff;
+    border: 3px solid #00796b;
+    position: relative;
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the new initial overlay screen */
+#initialOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 30; /* Highest layer */
+    text-align: center;
+    padding: 20px;
+}
+
+#initialStartButton {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Scoreboard styling (fixed at the top) */
+#scoreboard {
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+/* The area where fruits spawn and fall */
+#gameArea {
+    position: absolute;
+    top: 40px; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #80deea, #4dd0e1);
+    cursor: crosshair; 
+}
+
+/* Styling for the new Catcher object */
+#catcher {
+    position: absolute;
+    bottom: 10px; 
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    font-size: 3em; 
+}
+
+/* Styling for the dynamically created fruit elements (from JavaScript) */
+.fruit {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 40px; 
+    font-size: 1.8em; 
+    user-select: none; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Over Modal */
+#gameOverModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+/* Styling for the game over sticker */
+#gameOverSticker {
+    font-size: 4em;
+    margin-bottom: 10px;
+    animation: bounce 0.5s infinite alternate; /* Simple animation */
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+#gameOverModal h2 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+/* Restart Button */
+button#startButton {
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#startButton:hover {
+    background-color: #45a049;
+}
